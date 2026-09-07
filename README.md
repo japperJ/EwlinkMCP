@@ -6,6 +6,8 @@ pairing, gateway info, device control, live events and sensor history — as MCP
 tools over **Streamable HTTP**, so any AI assistant or coder agent can operate
 your house. It also serves a small live **dashboard** web page.
 
+![Sonoff iHost (eWeLink CUBE) gateway](docs/images/Cube.jpg)
+
 Fully independent: the Cube client, types, SSE handling and history database are
 re-implemented here. Zero dependency on the dashboard repo.
 
@@ -168,6 +170,8 @@ Every tool speaks plain JSON. Conventions used across all signatures:
 
 Besides MCP, the server exposes plain REST (used by the dashboard):
 
+![Climate dashboard with device picker, chart and legend](docs/images/Graph.png)
+
 - `GET /dashboard` — climate charts (device picker, metric, presets + custom
   from/to date picker), live event feed. No build step, no external assets.
 - `GET /api/gateway`, `GET /api/devices`, `GET /api/events?limit=`,
@@ -202,6 +206,11 @@ itself under "Reading the graphs".
 Any Streamable-HTTP MCP client works. If `MCP_API_KEY` is set, send
 `Authorization: Bearer <key>`; clients must also send
 `Accept: application/json, text/event-stream`.
+
+Once connected, just ask — the assistant can list devices, read sensors,
+switch lights and pull history through the tools above:
+
+![AI chat controlling eWeLink devices through MCP tools](docs/images/MCP-AI-Chat.png)
 
 ## Project structure
 
