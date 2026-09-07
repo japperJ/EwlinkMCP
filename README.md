@@ -25,7 +25,7 @@ re-implemented here. Zero dependency on the dashboard repo.
 
 - **Node.js 20+** and npm
 - An eWeLink CUBE / iHost gateway on the same LAN (this was built against
-  firmware 2.13.2 at `http://(you local IP)`)
+  firmware 2.13.2 at `http://(you local IP of the Cupe box or software)`)
 
 ## Setup
 
